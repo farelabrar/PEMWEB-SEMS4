@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+
+    <style>
+        /* CSS untuk mengatur lebar elemen fieldset */
+        fieldset {
+            width: 35%; /* Atur lebar sesuai kebutuhan, misalnya ..% */
+        }
+        
+        /* CSS untuk mengatur tata letak titik dua alamat mahasiswa */
+        .input-container {
+            display: flex;
+            align-items: top; /* Posisikan secara vertikal di atas */
+        }
+
+        .input-container label {
+            margin-right: 4px; /* Berikan sedikit ruang antara label dan textarea */
+        }
+    </style>
+  </head>
+  
+  <body>
+    <h1>Form Registrasi</h1>
+    <form action="submit.php" method="post">
+        <fieldset>
+            <legend>Biodata</legend>
+            <table>
+                <tr>
+                    <td>Nama Mahasiswa</td>
+                    <td>: <input type="text" name="nama" placeholder="Nama Anda" /></td>
+                </tr>
+                <tr>
+                    <td>No Induk Mahasiswa(NIM)</td>
+                    <td>: <input type="text" name="nim" /></td>
+                </tr>
+                <tr>
+                    <td>Alamat Mahasiswa</td>
+                    <td class="input-container">
+                        <label for="alamat">:</label>
+                        <textarea id="alamat" name="alamat" placeholder="Alamat Anda"></textarea>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>:
+                        <!-- Select untuk tanggal -->
+                        <select id="tanggal" name="tanggal">
+                            <option value="">01</option>
+                            <option value="">02</option>
+                            <option value="">03</option>
+                            <option value="">04</option>
+                            <option value="">05</option>
+                            <option value="">06</option>
+                            <option value="">07</option>
+                            <option value="">08</option>
+                            <option value="">09</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                            <option value="">13</option>
+                            <option value="">14</option>
+                            <option value="">15</option>
+                            <option value="">16</option>
+                            <option value="">17</option>
+                            <option value="">18</option>
+                            <option value="">19</option>
+                            <option value="">20</option>
+                            <option value="">21</option>
+                            <option value="">22</option>
+                            <option value="">23</option>
+                            <option value="">24</option>
+                            <option value="">25</option>
+                            <option value="">26</option>
+                            <option value="">27</option>
+                            <option value="">28</option>
+                            <option value="">29</option>
+                            <option value="">30</option>
+                            <option value="">31</option>
+                        </select>
+                        
+                        <!-- Select untuk bulan -->
+                        <select id="bulan" name="bulan">
+                            <option value="">Januari</option>
+                            <option value="">Februari</option>
+                            <option value="">Maret</option>
+                            <option value="">April</option>
+                            <option value="">Mei</option>
+                            <option value="">Juni</option>
+                            <option value="">Juli</option>
+                            <option value="">Agustus</option>
+                            <option value="">Septeber</option>
+                            <option value="">Oktober</option>
+                            <option value="">November</option>
+                            <option value="">Desember</option>
+                        </select>
+                    
+                        <!-- Select untuk tahun -->
+                        <select id="tahun" name="tahun">
+                            <option value="">1990</option>
+                            <option value="">1991</option>
+                            <option value="">1992</option>
+                            <option value="">1993</option>
+                            <option value="">1994</option>
+                            <option value="">1995</option>
+                            <option value="">1996</option>
+                            <option value="">1997</option>
+                            <option value="">1998</option>
+                            <option value="">1999</option>
+                            <option value="">2000</option>
+                            <option value="">2001</option>
+                        <!-- Tambahkan opsi lainnya sesuai kebutuhan -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>: <input type="radio" name="jk" value="pria" checked /> Pria <input type="radio" name="jk" value="wanita" /> Wanita</td>
+                </tr>
+                <tr>
+                    <td>Upload Foto</td>
+                    <td>: <input type="file" name="foto" /></td>
+                </tr>
+                <tr>
+                    <td>URL Website</td>
+                    <td>: <input type="text" name="website" placeholder="URL Website Anda" /></td>
+                </tr>
+                <tr>
+                    <td>Perguruan Tinggi</td>
+                    <td>: <input type="text" name="perguruan" /></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend>Info Akun</legend>
+            <table>
+                <tr>
+                    <td>Email</td>
+                    <td>: <input type="text" name="email" placeholder="Email Anda" /></td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td>: <input type="text" name="username" placeholder="Username Anda" /></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>: <input type="password" name="password" placeholder="Password Anda" /></td>
+                </tr>
+                <tr>
+                    <td>Ulangi Password</td>
+                    <td>: <input type="password" name="password2" placeholder="Password Anda" /></td>
+                </tr>
+                <tr>
+            </table>
+        </fieldset>
+        <br>
+
+        <fieldset>
+            <legend><td>Kemampuan Dasar</td></legend>
+            <table>
+                <td>
+                    <input type="checkbox" name="kemampuan[]" value="HTML" /> HTML
+                    <input type="checkbox" name="kemampuan[]" value="CSS" /> CSS
+                    <input type="checkbox" name="kemampuan[]" value="JavaScript" /> JavaScript
+                    <input type="checkbox" name="kemampuan[]" value="PHP" /> PHP
+                    <input type="checkbox" name="kemampuan[]" value="MySQL" /> MySQL
+                    <input type="checkbox" name="kemampuan[]" value="Laravel" /> Laravel
+                    <input type="checkbox" name="kemampuan[]" value="React Native" /> React Native
+                </td>
+            </table>
+        </fieldset>
+        <br>
+        
+        <button type="reset">Reset</button>
+        <button type="submit" name="submit">Simpan</button>
+        <button type="button">Button</button>
+    
+    </form>
+  </body>
+</html>
